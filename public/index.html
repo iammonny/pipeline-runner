@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pipeline Runner</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="frame">
+    <header class="hud">
+      <h1>Pipeline Runner</h1>
+      <p class="counters">
+        <span>PRs merged <output id="score">00000</output></span>
+        <span>Best <output id="best">00000</output></span>
+      </p>
+    </header>
+
+    <div class="stage">
+      <canvas id="game" width="600" height="180" aria-label="Runner game: jump over the bugs"></canvas>
+      <div id="overlay" class="overlay">
+        <p id="overlay-title">Press space to start the build</p>
+        <p id="overlay-hint">Jump over the bugs. Red ones are critical.</p>
+      </div>
+    </div>
+
+    <footer class="help">
+      <p>Space, up arrow or tap to jump.</p>
+    </footer>
+  </main>
+  <script type="module" src="/game.js"></script>
+</body>
+</html>
