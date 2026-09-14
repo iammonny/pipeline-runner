@@ -8,6 +8,7 @@ const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
 const scoreEl = document.getElementById('score');
 const bestEl = document.getElementById('best');
+const speedEl = document.getElementById('speed');
 const overlay = document.getElementById('overlay');
 const overlayTitle = document.getElementById('overlay-title');
 const overlayHint = document.getElementById('overlay-hint');
@@ -66,6 +67,7 @@ function update() {
   score += speed / 10;
   groundOffset = (groundOffset + speed) % 24;
   scoreEl.textContent = formatScore(score);
+  speedEl.textContent = speed.toFixed(1);
   if (obstacles.some((o) => collides(runner, o))) gameOver();
 }
 
