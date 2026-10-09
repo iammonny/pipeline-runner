@@ -3,3 +3,4 @@ npm-debug.log*
 .env
 *.tgz
 .DS_Store
+coverage/
